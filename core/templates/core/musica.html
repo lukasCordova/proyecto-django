@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Música</title>
+</head>
+<body>
+    <h1>Nuestra música!</h1>
+    <hr>
+    <h3>Discos:</h3>
+    {% for disco in discos %}
+        <p>{{disco}}</p> <br>
+    {% endfor %}
+    <br>
+    <h3>Canciones:</h3>
+    {% for cancion in canciones %}
+        <p>
+            <b>Título:</b><br>
+            {{ cancion.titulo }} <br>
+            <b>Link a youtube:</b><br>
+            <a href="{{ cancion.link }}">{{cancion.titulo}} en YT</a> <br>
+        </p>
+    {% endfor %}
+
+</body>
+</html>
