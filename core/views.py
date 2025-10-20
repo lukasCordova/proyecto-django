@@ -14,6 +14,19 @@ def inicio(request):
 
     return render(request, 'core/inicio.html', data)
 def contacto(request):
+    if request.POST:
+        #capturar el mensaje
+        nombre = request.POST["txtNombre"]
+        email = request.POST["txtEmail"]
+        mensaje = request.POST["txtMensaje"]
+        #validaciones de negocio
+
+
+        nuevoContacto = contacto()
+        nuevoContacto = contacto()
+        nuevoContacto = contacto()
+        
+
     ig_link = 'https://www.instagram.com/crucero_uno/'
     yt_link = 'https://youtube.com/@crucerouno?si=xO2bfVoTyZQwy4-I'
     data = {
@@ -32,3 +45,6 @@ def musica(request):
         'canciones': canciones
     }
     return render(request, 'core/musica.html', data)
+    
+
+

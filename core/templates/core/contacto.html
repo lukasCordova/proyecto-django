@@ -12,5 +12,14 @@
     <a href="{{ig}}">crucero_uno</a>
     <h3><b>Youtube:</b></h3> <br>
     <a href="{{yt}}">CruceroUno</a>
+
+    <h3>Déjanos tu contacto</h3>
+    <form action="{% url 'contacto' %}" method="POST">
+        {% csrf_token %}
+        <label>Nombre</label><input type="text" name="txtNombre"><br>
+        <label>Email</label><input type="email" name="txtEmail"><br>
+        <label>Mensaje</label><textarea name="txtMensaje"></textarea><br>
+        <button type="submit">Enviar</button>
+    </form>
 </body>
 </html>
